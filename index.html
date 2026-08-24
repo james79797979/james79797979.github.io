@@ -2,10 +2,323 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Change the browser-tab title here -->
+  <title>Your Name | Portfolio</title>
+
+  <style>
+    /* Change these colors to customize the website */
+    :root {
+      --dark: #172554;
+      --blue: #2563eb;
+      --gold: #f59e0b;
+      --light: #f1f5f9;
+      --white: #ffffff;
+      --text: #1e293b;
+    }
+
+    /* Basic page setup */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+    }
+
+    /* Main content width */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header and navigation */
+    header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 20px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* Introductory hero section */
+    .hero {
+      background: linear-gradient(135deg, var(--dark), var(--blue));
+      color: var(--white);
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0 0 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    /* Reusable buttons */
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #111827;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    /* General sections */
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* About section */
+    .about {
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Responsive project-card grid */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Individual project cards */
+    .project-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card video {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: #000000;
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-info p {
+      color: #64748b;
+    }
+
+    /* Contact section */
+    .contact {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .contact a {
+      color: var(--blue);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 650px) {
+      .header-content {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>My GitHub Pages Website Works</h1>
-  <p>This is being loaded from index.html.</p>
+
+  <!-- Website header -->
+  <header>
+    <div class="container header-content">
+      <!-- Replace this with your name or business name -->
+      <div class="logo">Your Name</div>
+
+      <!-- These links jump to sections on this page -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main introduction -->
+  <section class="hero">
+    <div class="container">
+      <!-- Replace this with your name -->
+      <h1>Your Name</h1>
+
+      <!-- Replace this with a description of your work -->
+      <p>Video creator and creative professional.</p>
+
+      <a class="button" href="#work">View My Work</a>
+      <a class="button" href="mailto:you@example.com">Email Me</a>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+
+      <div class="about">
+        <!-- Replace this paragraph with your biography -->
+        <p>
+          Write a short introduction about yourself, your experience,
+          and the type of work you create.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio section -->
+  <section id="work">
+    <div class="container">
+      <h2>My Work</h2>
+
+      <div class="projects">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <!--
+            This expects a video at:
+            videos/project-one.mp4
+
+            Create a "videos" folder in your repository and upload
+            your MP4 file there.
+          -->
+          <video controls preload="metadata">
+            <source src="videos/project-one.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+
+          <div class="project-info">
+            <h3>Project One</h3>
+            <p>Describe your first project here.</p>
+
+            <!-- Replace this URL with the full video URL -->
+            <a
+              class="button"
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Watch Full Video
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <video controls preload="metadata">
+            <source src="videos/project-two.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p>Describe your second project here.</p>
+
+            <a
+              class="button"
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Watch Full Video
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact and social-media section -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <h2>Contact Me</h2>
+
+        <!-- Replace these details with your own -->
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+
+        <!-- Replace each link with your own profile -->
+        <p>
+          <a href="https://www.youtube.com/" target="_blank">YouTube</a> |
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+          <a href="https://www.tiktok.com/" target="_blank">TikTok</a> |
+          <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Website footer -->
+  <footer>
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
