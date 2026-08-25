@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Change the browser-tab title here -->
-  <title>VonHogg | I.T Generalist</title>
+  <title>VonHogg | Services</title>
 
   <style>
-    /* Change these colors to customize the website */
     :root {
       --dark: #172554;
       --blue: #2563eb;
@@ -18,7 +15,6 @@
       --text: #1e293b;
     }
 
-    /* Basic page setup */
     * {
       box-sizing: border-box;
     }
@@ -30,14 +26,12 @@
       color: var(--text);
     }
 
-    /* Main content width */
     .container {
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
     }
 
-    /* Header and navigation */
     header {
       background: var(--dark);
       color: var(--white);
@@ -66,25 +60,33 @@
       color: var(--gold);
     }
 
-    /* Introductory hero section */
-    .hero {
-      background: linear-gradient(135deg, var(--dark), var(--blue));
-      color: var(--white);
+    main {
+      padding: 70px 0;
+    }
+
+    h1,
+    h2 {
       text-align: center;
-      padding: 90px 20px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0 0 15px;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
 
-    /* Reusable buttons */
+    .card h2 {
+      color: var(--blue);
+    }
+
     .button {
       display: inline-block;
       background: var(--gold);
@@ -93,76 +95,8 @@
       padding: 12px 20px;
       border-radius: 6px;
       font-weight: bold;
-      margin: 5px;
     }
 
-    .button:hover {
-      opacity: 0.85;
-    }
-
-    /* General sections */
-    section {
-      padding: 60px 0;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    /* About section */
-    .about {
-      max-width: 750px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    /* Responsive project-card grid */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    /* Individual project cards */
-    .project-card {
-      background: var(--white);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-card video {
-      display: block;
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      background: #000000;
-    }
-
-    .project-info {
-      padding: 20px;
-    }
-
-    .project-info p {
-      color: #64748b;
-    }
-
-    /* Contact section */
-    .contact {
-      max-width: 700px;
-      margin: 0 auto;
-      background: var(--white);
-      padding: 30px;
-      text-align: center;
-      border-radius: 10px;
-    }
-
-    .contact a {
-      color: var(--blue);
-    }
-
-    /* Footer */
     footer {
       background: var(--dark);
       color: var(--white);
@@ -170,154 +104,89 @@
       padding: 25px;
     }
 
-    /* Mobile layout */
     @media (max-width: 650px) {
       .header-content {
         flex-direction: column;
       }
 
       nav a {
-        margin: 0 7px;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
+        margin: 0 6px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Website header -->
   <header>
     <div class="container header-content">
-      <!-- Replace this with your name or business name -->
       <div class="logo">VonHogg LTD</div>
 
-      <!-- These links jump to sections on this page -->
       <nav>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main introduction -->
-  <section class="hero">
-    <div class="container">
-      <!-- Replace this with your name -->
-      <h1>VonHogg LTD</h1>
+  <main class="container">
+    <h1>Our Services</h1>
+    <p style="text-align: center;">
+      Creative and technical services provided by VonHogg LTD.
+    </p>
 
-      <!-- Replace this with a description of your work -->
-      <p>Video creator and creative professional.With a passion for Web design, Coding and Game creation</p>
-
-      <a class="button" href="#work">Come Have a Peek</a>
-      <a class="button" href="jim.hogg.79@outlook.com">Get In Touch</a>
-    </div>
-  </section>
-
-  <!-- About section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-
-      <div class="about">
-        <!-- Replace this paragraph with your biography -->
+    <div class="cards">
+      <article class="card">
+        <h2>Video Editing</h2>
         <p>
-          Wether it be a bit of Video Editing or Jailbreaking consoles VonHogg has it covered!!
+          Professional video editing, creative effects, and content preparation
+          for online platforms.
         </p>
-      </div>
-    </div>
-  </section>
+        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
+      </article>
 
-  <!-- Portfolio section -->
-  <section id="work">
-    <div class="container">
-      <h2>My Bastard Creations</h2>
-
-      <div class="projects">
-
-        <!-- Project 1 -->
-        <article class="project-card">
-          <!--
-            This expects a video at:
-            videos/project-one.mp4
-
-            Create a "videos" folder in your repository and upload
-            your MP4 file there.
-          -->
-          <video controls preload="metadata">
-            <source src="videos/project-one.mp4" type="video/mp4">
-            Your browser does not support video playback.
-          </video>
-
-          <div class="project-info">
-            <h3>Star Trek The Burnley Years</h3>
-            <p>The first steps down the road of madness lol..</p>
-
-            <!-- Replace this URL with the full video URL -->
-            <a
-              class="button"
-              href="https://youtu.be/ONz1aYBQRJk?si=fLYwXPPbEnd7BM5D"
-              target="_blank"
-              rel="noopener noreferrer">
-              Watch Full Video
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card">
-          <video controls preload="metadata">
-            <source src="videos/project-two.mp4" type="video/mp4">
-            Your browser does not support video playback.
-          </video>
-
-          <div class="project-info">
-            <h3>A.I. Ruins Robocop</h3>
-            <p>Imagine a world where Donald Trump amputated and stole your penis. Welcome to Murphy's world.</p>
-
-            <a
-              class="button"
-              href="https://youtu.be/d3zw5Y49b-M?si=Q2JBuGczlEFcU2q3"
-              target="_blank"
-              rel="noopener noreferrer">
-              Watch Full Video
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact and social-media section -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact">
-        <h2>Contact Me</h2>
-
-        <!-- Replace these details with your own -->
-        <p>Email: <a href="mailto:you@example.com">jim.hogg.79@outlook.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
-
-        <!-- Replace each link with your own profile -->
+      <article class="card">
+        <h2>Web Design</h2>
         <p>
-          <a href="https://www.youtube.com/@vonhoggltd3132" target="_blank">YouTube</a> |
-          <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-          <a href="https://www.tiktok.com/" target="_blank">TikTok</a> |
-          <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          Simple, responsive websites designed for individuals, creators, and
+          small businesses.
         </p>
-      </div>
-    </div>
-  </section>
+        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
+      </article>
 
-  <!-- Website footer -->
+      <article class="card">
+        <h2>Coding and Game Creation</h2>
+        <p>
+          Technical assistance with coding projects, experiments, and game
+          development ideas.
+        </p>
+        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
+      </article>
+
+      <article class="card">
+        <h2>Console Assistance</h2>
+        <p>
+          General technical guidance and troubleshooting for compatible gaming
+          and entertainment systems.
+        </p>
+        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
+      </article>
+    </div>
+  </main>
+
   <footer>
     <p>&copy; 2026 Jim Hogg. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
+After committing, wait one or two minutes and refresh the site. The links should look similar to:
+
+text
+
+
+https://your-username.github.io/your-repository/products.html
+https://your-username.github.io/your-repository/services.html
+Be sure that the files are named exactly products.html and services.html, including lowercase letters. Test the navigation and reply with ✅ if both pages work, or ❌ with the problem you see.
