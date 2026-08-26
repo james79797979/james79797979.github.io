@@ -1,1 +1,311 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --black: #090812;
+    --dark-purple: #17102c;
+    --pink: #ff1493;
+    --cyan: #00f5ff;
+    --yellow: #fff200;
+    --green: #7dff00;
+    --white: #ffffff;
+    --muted: #d4cfe3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--white);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 20, 147, 0.25), transparent 25%),
+        radial-gradient(circle at 85% 35%, rgba(0, 245, 255, 0.2), transparent 25%),
+        linear-gradient(135deg, #090812, #211038 50%, #090812);
+    font-family: "Space Grotesk", Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Graffiti-style decorative background */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+body::before {
+    width: 320px;
+    height: 320px;
+    top: 10%;
+    left: -100px;
+    border: 35px solid var(--pink);
+    transform: rotate(25deg);
+    filter: blur(1px);
+}
+
+body::after {
+    width: 220px;
+    height: 220px;
+    right: -60px;
+    bottom: 10%;
+    border: 28px solid var(--cyan);
+    border-radius: 50%;
+    transform: rotate(-20deg);
+}
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(9, 8, 18, 0.45), rgba(9, 8, 18, 0.8)),
+        url("images/header.jpg") center/cover no-repeat;
+    border-bottom: 5px solid var(--pink);
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(135deg, transparent 70%, rgba(255, 242, 0, 0.12) 70%),
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0 15px,
+            rgba(0, 245, 255, 0.08) 16px 18px
+        );
+    pointer-events: none;
+}
+
+.hero-overlay {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--yellow);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 var(--pink);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Bangers", Impact, sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+h1 {
+    color: var(--white);
+    font-size: clamp(4rem, 13vw, 9rem);
+    margin: 20px 0;
+    text-shadow:
+        6px 6px 0 var(--pink),
+        11px 11px 0 var(--cyan);
+    transform: rotate(-2deg);
+}
+
+h1 span {
+    color: var(--yellow);
+}
+
+h2 {
+    color: var(--cyan);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin: 15px 0 20px;
+    text-shadow: 4px 4px 0 var(--pink);
+}
+
+h3 {
+    color: var(--yellow);
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.hero-text {
+    color: var(--muted);
+    font-size: 1.2rem;
+    margin: 0 auto 30px;
+    max-width: 650px;
+}
+
+.main-button,
+.contact-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 3px solid var(--yellow);
+    color: var(--black);
+    background: var(--yellow);
+    box-shadow: 6px 6px 0 var(--pink);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.main-button:hover,
+.contact-button:hover {
+    color: var(--white);
+    background: var(--pink);
+    border-color: var(--cyan);
+    box-shadow: 6px 6px 0 var(--cyan);
+    transform: translate(-2px, -2px);
+}
+
+.intro,
+.services-section,
+.contact-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 24px;
+    text-align: center;
+}
+
+.intro p:not(.eyebrow),
+.contact-section p:not(.eyebrow) {
+    color: var(--muted);
+    max-width: 700px;
+    margin: auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.service-card {
+    min-height: 370px;
+    display: flex;
+    align-items: flex-end;
+    color: var(--white);
+    text-align: left;
+    text-decoration: none;
+    overflow: hidden;
+    border: 3px solid var(--cyan);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 10%, rgba(9, 8, 18, 0.95) 90%);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    border-color: var(--yellow);
+    box-shadow: 10px 10px 0 var(--pink);
+}
+
+.console-card {
+    background-image: url("images/console-modding.jpg"),
+        linear-gradient(135deg, #ff1493, #7020ff);
+}
+
+.pc-card {
+    background-image: url("images/pc-building.jpg"),
+        linear-gradient(135deg, #00f5ff, #164dff);
+}
+
+.jailbreak-card {
+    background-image: url("images/jailbreaking.jpg"),
+        linear-gradient(135deg, #7dff00, #00a878);
+}
+
+.card-content {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-number {
+    color: var(--cyan);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-content p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.contact-section {
+    border-top: 3px solid var(--pink);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.social-links a {
+    color: var(--cyan);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--yellow);
+    text-shadow: 2px 2px var(--pink);
+}
+
+footer {
+    padding: 25px;
+    color: var(--muted);
+    background: #05050b;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    h1 {
+        font-size: clamp(4rem, 20vw, 7rem);
+    }
+}
