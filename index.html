@@ -1,185 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VonHogg | Services</title>
-
-  <style>
-    :root {
-      --dark: #172554;
-      --blue: #2563eb;
-      --gold: #f59e0b;
-      --light: #f1f5f9;
-      --white: #ffffff;
-      --text: #1e293b;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--light);
-      color: var(--text);
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    header {
-      background: var(--dark);
-      color: var(--white);
-      padding: 20px 0;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 18px;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    main {
-      padding: 70px 0;
-    }
-
-    h1,
-    h2 {
-      text-align: center;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: var(--white);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    }
-
-    .card h2 {
-      color: var(--blue);
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: #111827;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    footer {
-      background: var(--dark);
-      color: var(--white);
-      text-align: center;
-      padding: 25px;
-    }
-
-    @media (max-width: 650px) {
-      .header-content {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 0 6px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VonHogg LTD - Console modding, PC building and jailbreaking services.">
+    <title>VonHogg LTD | Modding, PCs & Jailbreaking</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <div class="container header-content">
-      <div class="logo">VonHogg LTD</div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#work">Work</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <header class="hero">
+        <div class="hero-overlay">
+            <p class="eyebrow">TECH • CUSTOM • CREATIVE</p>
+            <h1>VonHogg <span>LTD</span></h1>
+            <p class="hero-text">
+                Console modding, custom PC building and specialist jailbreaking services.
+            </p>
+            <a class="main-button" href="#services">Explore Services</a>
+        </div>
+    </header>
 
-  <main class="container">
-    <h1>Our Services</h1>
-    <p style="text-align: center;">
-      Creative and technical services provided by VonHogg LTD.
-    </p>
+    <main>
+        <section class="intro">
+            <p class="eyebrow">WELCOME TO THE WORKSHOP</p>
+            <h2>Built different. Modded better.</h2>
+            <p>
+                Professional-looking custom tech services for gaming enthusiasts,
+                creators and anyone who wants their hardware to stand out.
+            </p>
+        </section>
 
-    <div class="cards">
-      <article class="card">
-        <h2>Video Editing</h2>
-        <p>
-          Professional video editing, creative effects, and content preparation
-          for online platforms.
-        </p>
-        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
-      </article>
+        <section id="services" class="services-section">
+            <p class="eyebrow">WHAT I OFFER</p>
+            <h2>Choose your service</h2>
 
-      <article class="card">
-        <h2>Web Design</h2>
-        <p>
-          Simple, responsive websites designed for individuals, creators, and
-          small businesses.
-        </p>
-        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
-      </article>
+            <div class="service-grid">
 
-      <article class="card">
-        <h2>Coding and Game Creation</h2>
-        <p>
-          Technical assistance with coding projects, experiments, and game
-          development ideas.
-        </p>
-        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
-      </article>
+                <a class="service-card console-card" href="console-modding.html">
+                    <div class="card-content">
+                        <span class="card-number">01</span>
+                        <h3>Console Modding</h3>
+                        <p>Custom console modifications, upgrades and visual transformations.</p>
+                        <span class="card-link">View service →</span>
+                    </div>
+                </a>
 
-      <article class="card">
-        <h2>Console Assistance</h2>
-        <p>
-          General technical guidance and troubleshooting for compatible gaming
-          and entertainment systems.
-        </p>
-        <a class="button" href="mailto:jim.hogg.79@outlook.com">Get In Touch</a>
-      </article>
-    </div>
-  </main>
+                <a class="service-card pc-card" href="pc-building.html">
+                    <div class="card-content">
+                        <span class="card-number">02</span>
+                        <h3>PC Building</h3>
+                        <p>Custom gaming and performance PCs built around your needs and budget.</p>
+                        <span class="card-link">View service →</span>
+                    </div>
+                </a>
 
-  <footer>
-    <p>&copy; 2026 Jim Hogg. All rights reserved.</p>
-  </footer>
+                <a class="service-card jailbreak-card" href="jailbreaking.html">
+                    <div class="card-content">
+                        <span class="card-number">03</span>
+                        <h3>Jailbreaking</h3>
+                        <p>Guidance and technical services for supported devices and software.</p>
+                        <span class="card-link">View service →</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Ready to start a project?</h2>
+            <p>
+                Replace the details below with your real contact information.
+            </p>
+
+            <div class="contact-buttons">
+                <a class="contact-button" href="mailto:your-email@example.com">
+                    ✉ Email me
+                </a>
+
+                <a class="contact-button" href="tel:+440000000000">
+                    ☎ Call me
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="TikTok">TikTok</a>
+                <a href="#" aria-label="YouTube">YouTube</a>
+                <a href="#" aria-label="Discord">Discord</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 VonHogg LTD. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
 
