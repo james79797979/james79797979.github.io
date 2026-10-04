@@ -3,43 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Console Modding | VonHogg LTD</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <header class="hero service-hero">
-        <div class="hero-overlay">
-            <p class="eyebrow">VONHOGG LTD</p>
-            <h1>Console <span>Modding</span></h1>
-            <p class="hero-text">
-                Custom modifications and upgrades to give your console a new identity.
+    <title>Console Modding | VonHogg LTD</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="console-modding.css">
+</head>
+
+<body class="console-page">
+
+    <header class="console-hero">
+        <nav class="console-nav">
+            <a href="index.html" class="brand">VONHOGG<span>_</span></a>
+            <a href="index.html" class="back-link">← Back home</a>
+        </nav>
+
+        <div class="console-hero-content">
+            <p class="console-label">/ SERVICE 02 / CONSOLE MODDING</p>
+
+            <h1>Console<br><span>Modding</span></h1>
+
+            <p>
+                Hardware modification, customisation and technical support
+                for selected Sony, Microsoft and Nintendo consoles.
             </p>
-            <a class="main-button" href="index.html">← Back home</a>
+
+            <a class="console-button main-console-button" href="#brands">
+                Choose your console ↓
+            </a>
         </div>
     </header>
 
     <main>
-        <section class="intro">
-            <p class="eyebrow">SERVICE 01</p>
-            <h2>Make your console stand out</h2>
-            <p>
-                Add your console modding services, supported models, upgrade options,
-                turnaround times and prices here.
-            </p>
+        <section class="brand-section" id="brands">
+            <div class="section-intro">
+                <p class="console-label">/ SELECT PLATFORM</p>
+                <h2>Choose your<br><span>console family.</span></h2>
+            </div>
+
+            <div class="brand-grid">
+
+                <article class="brand-card playstation-card">
+                    <div class="brand-top">
+                        <span class="brand-number">01</span>
+                        <span class="brand-status">SONY SYSTEMS</span>
+                    </div>
+
+                    <div class="brand-symbol">△</div>
+
+                    <h3>PlayStation</h3>
+
+                    <p>
+                        Customisation, modification guidance and technical
+                        support for compatible PlayStation systems.
+                    </p>
+
+                    <div class="console-links">
+                        <a href="playstation-5.html">PlayStation 5 <span>→</span></a>
+                        <a href="playstation-4.html">PlayStation 4 <span>→</span></a>
+                        <a href="playstation-3.html">PlayStation 3 <span>→</span></a>
+                        <a href="playstation-vita.html">PlayStation Vita <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="brand-card xbox-card">
+                    <div class="brand-top">
+                        <span class="brand-number">02</span>
+                        <span class="brand-status">MICROSOFT SYSTEMS</span>
+                    </div>
+
+                    <div class="brand-symbol">X</div>
+
+                    <h3>Xbox</h3>
+
+                    <p>
+                        Support and custom modification options for selected
+                        Xbox consoles and compatible systems.
+                    </p>
+
+                    <div class="console-links">
+                        <a href="xbox-series.html">Xbox Series X|S <span>→</span></a>
+                        <a href="xbox-one.html">Xbox One <span>→</span></a>
+                        <a href="xbox-360.html">Xbox 360 <span>→</span></a>
+                        <a href="original-xbox.html">Original Xbox <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="brand-card nintendo-card">
+                    <div class="brand-top">
+                        <span class="brand-number">03</span>
+                        <span class="brand-status">NINTENDO SYSTEMS</span>
+                    </div>
+
+                    <div class="brand-symbol">＋</div>
+
+                    <h3>Nintendo</h3>
+
+                    <p>
+                        Modification, customisation and technical guidance for
+                        compatible Nintendo hardware.
+                    </p>
+
+                    <div class="console-links">
+                        <a href="nintendo-switch.html">Nintendo Switch <span>→</span></a>
+                        <a href="nintendo-3ds.html">Nintendo 3DS <span>→</span></a>
+                        <a href="wii-u.html">Wii U <span>→</span></a>
+                        <a href="wii.html">Nintendo Wii <span>→</span></a>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
-        <section class="contact-section">
-            <h2>Ask about a mod</h2>
+        <section class="modding-contact" id="contact">
+            <p class="console-label">/ NEED HELP CHOOSING?</p>
+
+            <h2>Not sure where<br><span>to begin?</span></h2>
+
+            <p>
+                Send me your console model and software version.
+                I can explain the available options and compatibility.
+            </p>
+
             <div class="contact-buttons">
-                <a class="contact-button" href="mailto:your-email@example.com">✉ Email me</a>
-                <a class="contact-button" href="tel:+440000000000">☎ Call me</a>
+                <a class="console-button" href="mailto:your-email@example.com">
+                    ✉ Email me
+                </a>
+
+                <a class="console-button alternate-button" href="tel:+440000000000">
+                    ☎ Call me
+                </a>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="console-footer">
         <p>© 2026 VonHogg LTD. All rights reserved.</p>
+        <p>CONSOLE MODDING // VONHOGG LTD</p>
     </footer>
 
 </body>
