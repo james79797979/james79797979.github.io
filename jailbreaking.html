@@ -3,43 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jailbreaking | VonHogg LTD</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <header class="hero service-hero">
-        <div class="hero-overlay">
-            <p class="eyebrow">VONHOGG LTD</p>
-            <h1><span>Jailbreaking</span></h1>
-            <p class="hero-text">
-                Custom Jailbreaks, Technical guidance and sevices for supported devices and software.
+    <title>Jailbreaking | VonHogg LTD</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jailbreaking.css">
+</head>
+
+<body class="jailbreak-page">
+
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+    <header class="jailbreak-hero">
+        <div class="jailbreak-grid"></div>
+
+        <nav class="jailbreak-nav">
+            <a href="index.html" class="brand">VONHOGG<span>_</span></a>
+            <a href="index.html" class="back-link">← Back home</a>
+        </nav>
+
+        <div class="jailbreak-hero-content">
+            <p class="matrix-label">/ SERVICE 01 / SYSTEM ACCESS</p>
+
+            <h1>
+                <span>Jail</span><span>breaking</span>
+            </h1>
+
+            <p class="jailbreak-lead">
+                Custom jailbreaks, technical guidance and specialist support
+                for compatible devices and software.
             </p>
-            <a class="main-button" href="index.html">← Back home</a>
+
+            <div class="hero-actions">
+                <a class="matrix-button primary-button" href="#options">
+                    Explore service
+                    <span>↓</span>
+                </a>
+
+                <a class="matrix-button secondary-button" href="#contact">
+                    Contact me
+                </a>
+            </div>
+        </div>
+
+        <div class="status-panel">
+            <span class="status-dot"></span>
+            <span>STATUS: AVAILABLE</span>
         </div>
     </header>
 
     <main>
-        <section class="intro">
-            <p class="eyebrow">SERVICE 03</p>
-            <h2>Unlock more possibilities</h2>
-            <p>
-                Add your services and prices etc...
-            </p>
+        <section class="jailbreak-section" id="options">
+            <div class="section-heading">
+                <p class="matrix-label">/ WHAT I OFFER</p>
+                <h2>More control.<br><span>More possibilities.</span></h2>
+            </div>
+
+            <div class="service-cards">
+                <article class="service-card">
+                    <div class="card-number">01</div>
+                    <div class="card-icon">⌘</div>
+                    <h3>Jailbreak Setup</h3>
+                    <p>
+                        Guidance with compatible jailbreak methods, preparation,
+                        setup and essential configuration.
+                    </p>
+                    <span class="card-line"></span>
+                </article>
+
+                <article class="service-card">
+                    <div class="card-number">02</div>
+                    <div class="card-icon">▣</div>
+                    <h3>Custom Configuration</h3>
+                    <p>
+                        Assistance configuring tweaks, tools, software and
+                        settings to suit your requirements.
+                    </p>
+                    <span class="card-line"></span>
+                </article>
+
+                <article class="service-card">
+                    <div class="card-number">03</div>
+                    <div class="card-icon">↻</div>
+                    <h3>Technical Support</h3>
+                    <p>
+                        Troubleshooting, maintenance and practical guidance
+                        when something is not working as expected.
+                    </p>
+                    <span class="card-line"></span>
+                </article>
+            </div>
         </section>
 
-        <section class="contact-section">
-            <h2>Ask about your options</h2>
+        <section class="process-section">
+            <div class="section-heading">
+                <p class="matrix-label">/ HOW IT WORKS</p>
+                <h2>A clear route<br><span>from start to finish.</span></h2>
+            </div>
+
+            <div class="process-list">
+                <div class="process-step">
+                    <span>01</span>
+                    <div>
+                        <h3>Discuss</h3>
+                        <p>Tell me about your device, software version and goals.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <span>02</span>
+                    <div>
+                        <h3>Assess</h3>
+                        <p>I check compatibility and explain the available options.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <span>03</span>
+                    <div>
+                        <h3>Complete</h3>
+                        <p>Receive clear guidance or support throughout the process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section jailbreak-contact" id="contact">
+            <p class="matrix-label">/ INITIALISE CONTACT</p>
+            <h2>Ready to unlock<br><span>more possibilities?</span></h2>
+            <p>
+                Get in touch to discuss your device, requirements and available options.
+            </p>
+
             <div class="contact-buttons">
-                <a class="contact-button" href="mailto:your-email@example.com">✉ Email me</a>
-                <a class="contact-button" href="tel:+440000000000">☎ Call me</a>
+                <a class="matrix-button primary-button" href="mailto:your-email@example.com">
+                    ✉ Email me
+                </a>
+
+                <a class="matrix-button secondary-button" href="tel:+440000000000">
+                    ☎ Call me
+                </a>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="jailbreak-footer">
         <p>© 2026 VonHogg LTD. All rights reserved.</p>
+        <p class="footer-code">SYSTEM ONLINE // VONHOGG LTD</p>
     </footer>
+
+    <script>
+        const canvas = document.getElementById("matrix-canvas");
+        const context = canvas.getContext("2d");
+
+        let width;
+        let height;
+        let columns;
+        let drops;
+
+        const characters =
+            "アカサタナハマヤラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            columns = Math.floor(width / 18);
+            drops = Array(columns).fill(1);
+        }
+
+        function drawMatrix() {
+            context.fillStyle = "rgba(2, 8, 5, 0.08)";
+            context.fillRect(0, 0, width, height);
+
+            context.fillStyle = "#25ff88";
+            context.font = "14px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const character =
+                    characters[Math.floor(Math.random() * characters.length)];
+
+                context.fillText(character, i * 18, drops[i] * 18);
+
+                if (drops[i] * 18 > height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        resizeCanvas();
+        setInterval(drawMatrix, 45);
+
+        window.addEventListener("resize", resizeCanvas);
+    </script>
 
 </body>
 </html>
