@@ -141,7 +141,7 @@ body.jailbreak-page {
     color: white;
     font-size: clamp(4rem, 13vw, 10rem);
     line-height: 0.85;
-    letter-spacing: -0.08em;
+    letter-spacing: -0.02em;
     text-shadow:
         0 0 10px rgba(37, 255, 136, 0.8),
         0 0 45px rgba(37, 255, 136, 0.45);
