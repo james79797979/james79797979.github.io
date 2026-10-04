@@ -1,0 +1,423 @@
+:root {
+    --console-dark: #080a0d;
+    --console-panel: #11151b;
+    --console-text: #f4f7fa;
+    --console-muted: #9ba6b2;
+
+    --playstation-blue: #2b8cff;
+    --xbox-green: #67d900;
+    --nintendo-red: #f04444;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.console-page {
+    margin: 0;
+    color: var(--console-text);
+    background:
+        radial-gradient(circle at 50% 0%, #222b35 0%, var(--console-dark) 42%),
+        var(--console-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.console-hero {
+    position: relative;
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 7vw;
+    overflow: hidden;
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(43, 140, 255, 0.13),
+            transparent 35%,
+            rgba(103, 217, 0, 0.08) 65%,
+            rgba(240, 68, 68, 0.1)
+        );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.console-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 55px 55px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.console-nav {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 7vw;
+    right: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+}
+
+.brand span {
+    color: var(--playstation-blue);
+}
+
+.back-link {
+    color: #aeb9c5;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+.console-hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(800px, 100%);
+}
+
+.console-label {
+    margin: 0 0 22px;
+    color: #c8d2dc;
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+}
+
+.console-hero h1 {
+    margin: 0;
+    font-size: clamp(4.5rem, 13vw, 10rem);
+    line-height: 0.84;
+    letter-spacing: -0.045em;
+    text-shadow: 0 0 35px rgba(255, 255, 255, 0.16);
+}
+
+.console-hero h1 span {
+    color: var(--playstation-blue);
+    background: linear-gradient(
+        90deg,
+        var(--playstation-blue),
+        var(--xbox-green),
+        var(--nintendo-red)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.console-hero-content > p:not(.console-label) {
+    max-width: 570px;
+    margin: 35px auto 0;
+    color: #bdc7d0;
+    line-height: 1.8;
+}
+
+.console-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    padding: 15px 22px;
+    border: 1px solid white;
+    color: white;
+    background: rgba(255, 255, 255, 0.04);
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.console-button:hover {
+    color: #080a0d;
+    background: white;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.main-console-button {
+    margin-top: 35px;
+}
+
+.brand-section,
+.modding-contact {
+    width: min(1180px, 86%);
+    margin: auto;
+    padding: 120px 0;
+}
+
+.section-intro h2,
+.modding-contact h2 {
+    margin: 0;
+    font-size: clamp(2.7rem, 6vw, 5.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+.section-intro h2 span,
+.modding-contact h2 span {
+    color: #b7c2cd;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 65px;
+}
+
+.brand-card {
+    position: relative;
+    min-height: 570px;
+    padding: 28px;
+    overflow: hidden;
+    background: var(--console-panel);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+}
+
+.brand-card::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    bottom: -100px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    opacity: 0.12;
+}
+
+.playstation-card {
+    border-top: 3px solid var(--playstation-blue);
+}
+
+.playstation-card::after {
+    background: var(--playstation-blue);
+    box-shadow: 0 0 100px 70px var(--playstation-blue);
+}
+
+.xbox-card {
+    border-top: 3px solid var(--xbox-green);
+}
+
+.xbox-card::after {
+    background: var(--xbox-green);
+    box-shadow: 0 0 100px 70px var(--xbox-green);
+}
+
+.nintendo-card {
+    border-top: 3px solid var(--nintendo-red);
+}
+
+.nintendo-card::after {
+    background: var(--nintendo-red);
+    box-shadow: 0 0 100px 70px var(--nintendo-red);
+}
+
+.playstation-card:hover {
+    box-shadow: 0 15px 40px rgba(43, 140, 255, 0.2);
+}
+
+.xbox-card:hover {
+    box-shadow: 0 15px 40px rgba(103, 217, 0, 0.18);
+}
+
+.nintendo-card:hover {
+    box-shadow: 0 15px 40px rgba(240, 68, 68, 0.2);
+}
+
+.brand-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #8d99a5;
+    font-family: monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+}
+
+.brand-number {
+    color: white;
+}
+
+.brand-symbol {
+    position: relative;
+    z-index: 1;
+    margin: 55px 0 18px;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.playstation-card .brand-symbol {
+    color: var(--playstation-blue);
+}
+
+.xbox-card .brand-symbol {
+    color: var(--xbox-green);
+}
+
+.nintendo-card .brand-symbol {
+    color: var(--nintendo-red);
+}
+
+.brand-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.brand-card > p {
+    position: relative;
+    z-index: 1;
+    min-height: 90px;
+    color: var(--console-muted);
+    line-height: 1.65;
+}
+
+.console-links {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+}
+
+.console-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e6ebef;
+    font-family: monospace;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition:
+        padding 0.25s ease,
+        color 0.25s ease;
+}
+
+.console-links a:hover {
+    padding-left: 8px;
+    color: white;
+}
+
+.playstation-card .console-links a:hover {
+    color: var(--playstation-blue);
+}
+
+.xbox-card .console-links a:hover {
+    color: var(--xbox-green);
+}
+
+.nintendo-card .console-links a:hover {
+    color: var(--nintendo-red);
+}
+
+.modding-contact {
+    max-width: 850px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.modding-contact > p:not(.console-label) {
+    max-width: 570px;
+    margin: 28px auto 0;
+    color: var(--console-muted);
+    line-height: 1.8;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.alternate-button {
+    border-color: #66717c;
+    color: #b9c2ca;
+}
+
+.console-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 7vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: #7c8791;
+    font-family: monospace;
+    font-size: 0.7rem;
+}
+
+.console-footer p:last-child {
+    color: #b4bec8;
+}
+
+@media (max-width: 900px) {
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-card {
+        min-height: auto;
+    }
+
+    .brand-card > p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .console-hero {
+        min-height: 620px;
+    }
+
+    .console-hero h1 {
+        letter-spacing: -0.025em;
+    }
+
+    .brand-section,
+    .modding-contact {
+        padding: 85px 0;
+    }
+
+    .console-footer {
+        flex-direction: column;
+    }
+}
