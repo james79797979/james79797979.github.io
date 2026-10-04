@@ -421,3 +421,84 @@ body.console-page {
         flex-direction: column;
     }
 }
+.console-hero {
+    justify-content: center;
+    text-align: center;
+}
+
+.console-hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.console-hero-content > p:not(.console-label) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-console-button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centre the section heading */
+
+.section-intro {
+    text-align: center;
+}
+
+.section-intro .console-label {
+    text-align: center;
+}
+
+/* Centre all three console cards */
+
+.brand-card {
+    text-align: center;
+}
+
+.brand-top {
+    justify-content: center;
+}
+
+.brand-symbol {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-card > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centre the console links inside each card */
+
+.console-links {
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.console-links a {
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Centre the contact section */
+
+.modding-contact {
+    max-width: 850px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modding-contact > p:not(.console-label) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modding-contact .contact-buttons {
+    justify-content: center;
+}
